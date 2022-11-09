@@ -6,5 +6,9 @@ export default class ProductService {
 
   async createProduct(name: string, amount: string): Promise<IProduct> {
     return this.productModel.createProduct(name, amount);
-  } 
+  }
+
+  async getProducts(): Promise<IProduct[]> {
+    return this.productModel.getProduct();
+  }
 }
